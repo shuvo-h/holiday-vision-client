@@ -28,9 +28,6 @@ function App() {
             <PrivateRoute exact path="/user-booking">
                 <UserBookings></UserBookings>
             </PrivateRoute>
-            <PrivateRoute exact path="/user-booking">
-                
-            </PrivateRoute>
             <PrivateRoute exact path="/manage-all-booking">
                 <ManageBooking></ManageBooking>
             </PrivateRoute>

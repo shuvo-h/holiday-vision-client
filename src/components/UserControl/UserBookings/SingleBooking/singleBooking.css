@@ -1,0 +1,6 @@
+.booking-item:hover{
+    background-color: lightyellow !important; 
+}
+.booking-list-img{
+    max-height: 150px;
+}

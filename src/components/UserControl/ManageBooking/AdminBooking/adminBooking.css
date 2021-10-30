@@ -1,0 +1,9 @@
+.manage-container{
+    min-height: calc(100vh - 348.5px);
+}
+.admin-item:hover{
+    background-color: lightyellow !important; 
+}
+.manage-img {
+    max-height: 150px;
+}

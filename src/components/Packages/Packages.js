@@ -6,7 +6,7 @@ import HolidayPack from './HolidayPack/HolidayPack';
 
 const Packages = () => {
     const [packages,setPackages] = useState([]);
-    console.log(packages);
+    
     useEffect(()=>{
         fetch('http://localhost:5000/allpackages')
             .then(res=>res.json())
@@ -18,7 +18,10 @@ const Packages = () => {
             <hr />
             <Row className="bg-light g-1 mt-4">
                 {
-                    packages.length ?  packages.map(holidayPack=><HolidayPack holidayPack={holidayPack} key={holidayPack._id}></HolidayPack>) : <Spinner animation="border" size={100} variant="primary" />
+                    packages.length ?  packages.map(holidayPack=><HolidayPack holidayPack={holidayPack} key={holidayPack._id}></HolidayPack>) 
+                    : <div className="text-center p-5"> 
+                            <Spinner animation="border" style={{width:"100px", height:"100px"}} variant="primary"  /> 
+                    </div>
                 }
             </Row>
         </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { Col, Row } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
 import SingleBooking from './SingleBooking/SingleBooking';
 
@@ -40,8 +41,17 @@ const UserBookings = () => {
     }
 
     return (
-        <div>
-            <h2>My Booking List</h2>
+        <div className="container my-4">
+            <h2 className=" text-center mb-4">My Booking List</h2>
+            <Row>
+                <Col><strong>Booking Picture</strong></Col>
+                <Col><strong>Package Title</strong></Col>
+                <Col className="d-none d-sm-none d-md-block"><strong>Tour Duration</strong></Col>
+                <Col className="d-none d-sm-none d-md-block"><strong>Journey Date</strong></Col>
+                <Col><strong>Booking Status</strong></Col>
+                <Col><strong>Withdraw</strong></Col>
+            <hr />
+            </Row>
             <div>
                 {
                     bookingList.map(booking=><SingleBooking booking={booking} handleBookingCancle={handleBookingCancle} key={booking._id}></SingleBooking>)

@@ -11,7 +11,7 @@ const NavBarTravel = () => {
         <>
             <Navbar className="px-5" expand="lg" bg="primary" variant="dark">
                 <Container fluid>
-                    <Navbar.Brand as={NavLink} to="/" className="text-warning ms-5 fw-bold fs-2">Holiday Vision</Navbar.Brand>
+                    <Navbar.Brand as={NavLink} to="/" className="text-warning ms-xl-5 fw-bold fs-2">Holiday Vision</Navbar.Brand>
                         <Navbar.Toggle aria-controls="navbarScroll" />
                         <Navbar.Collapse id="navbarScroll">
                         <Nav
@@ -23,6 +23,7 @@ const NavBarTravel = () => {
                             <Nav.Link as={NavHashLink} to="/home">Home</Nav.Link>
                                 <Nav.Link  as={NavHashLink} to="/home#packages">Packages</Nav.Link>
                                 <Nav.Link  as={NavHashLink} to="/home#blogs" smooth >Blogs</Nav.Link>
+                                <Nav.Link  as={NavHashLink} to="/home#destination" smooth >Destinations</Nav.Link>
                                     {
                                         user.email && <>
                                             <Nav.Link as={NavLink} to="/user-booking">My Bookings</Nav.Link>

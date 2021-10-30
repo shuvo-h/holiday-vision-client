@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Row } from 'react-bootstrap';
+import { Row, Spinner } from 'react-bootstrap';
 import Destination from './Destination/Destination';
 
 const Destinations = () => {
@@ -16,7 +16,10 @@ const Destinations = () => {
             <hr />
             <Row className="g-4">
                 {
-                    destinations.map(destination=><Destination destination={destination} key={destination._id }></Destination>)
+                    destinations.length ? destinations.map(destination=><Destination destination={destination} key={destination._id }></Destination>)
+                    : <div className="text-center p-5"> 
+                            <Spinner animation="border" style={{width:"100px", height:"100px"}} variant="primary"  /> 
+                    </div>
                 }
             </Row>
         </section>

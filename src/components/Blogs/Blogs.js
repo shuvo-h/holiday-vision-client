@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Row } from 'react-bootstrap';
+import { Row, Spinner } from 'react-bootstrap';
 import Blog from './Blog/Blog';
 
 const Blogs = () => {
@@ -15,7 +15,10 @@ const Blogs = () => {
             <h2 className="bg-light p-3 text-center mt-4">Our Blog and Experiences</h2>
             <Row className="my-4 g-3">
                 {
-                    blogs.map(blog=><Blog blog={blog} key={blog._id}></Blog>)
+                    blogs.length ? blogs.map(blog=><Blog blog={blog} key={blog._id}></Blog>) 
+                    : <div className="text-center p-5"> 
+                            <Spinner animation="border" style={{width:"100px", height:"100px"}} variant="primary"  /> 
+                    </div>
                 }
             </Row>
         </div>

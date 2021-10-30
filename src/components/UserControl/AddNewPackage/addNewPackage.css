@@ -1,0 +1,7 @@
+.package-add-container{
+    min-height: calc(100vh - 300.5px);
+}
+.package-add-form{
+    width: fit-content;
+    box-shadow: 0 0 10px 1px rgba(74, 74, 238, 0.568);
+}
