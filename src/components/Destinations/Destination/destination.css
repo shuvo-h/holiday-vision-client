@@ -1,0 +1,13 @@
+.destination-card{
+    transition: transform 0.3s ease-in-out;
+}
+.destination-card:hover{
+    transform: scale(1.04);
+}
+.destination-text{
+    font-size: large;
+    font-weight: 700;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

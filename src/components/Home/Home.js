@@ -6,17 +6,20 @@ import Packages from '../Packages/Packages';
 
 const Home = () => {
     return (
-        <div>
+        <div id="home">
             <div>
+                <Banner></Banner>
+            </div>
+            <div id="packages">
                 <Packages></Packages>
             </div>
-            <div>
+            <div id="blogs">
                 <Blogs></Blogs>
             </div>
             <div>
                 <Destinations></Destinations>
             </div>
-            <Banner></Banner>
+            
         </div>
     );
 };

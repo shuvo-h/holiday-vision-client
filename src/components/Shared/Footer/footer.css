@@ -1,0 +1,16 @@
+footer{
+    background-image: url('https://i.ibb.co/Wvh0XKZ/footer.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 0 10%;
+}
+footer li{
+    line-height: 200%;
+}
+.footer-item{
+    text-decoration: none;
+}
+.footer-item:hover{
+    color: white;
+    text-decoration: underline;
+}

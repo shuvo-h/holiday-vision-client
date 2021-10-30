@@ -15,7 +15,25 @@ const BookingForm = () => {
             .then(res=>res.json())
             .then(data=>setBookingPackage(data))
     },[id])
-    const onSubmit = touristInfo => console.log(touristInfo);
+    
+    const onSubmit = bookingInfo => {
+        bookingInfo.booking_pkg_id = _id;
+        bookingInfo.status = "Pending";
+        
+        fetch('http://localhost:5000/booking',{
+            method:"POST",
+            headers:{
+                'content-type': "application/json"
+            },
+            body: JSON.stringify(bookingInfo)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            if (data.insertedId) {
+                alert("booking request accepted. Wait to accept.")
+            }
+        })
+    };
     return (
         <div className="container">
             <div>
@@ -44,7 +62,7 @@ const BookingForm = () => {
                         Address:
                         <input {...register("address")}  placeholder="Address"/>
                     </label><br />
-                    <input type="submit" />
+                    <button type="submit">Booking Request</button>
                 </form>
             </div>
         </div>

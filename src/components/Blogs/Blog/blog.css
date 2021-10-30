@@ -1,0 +1,12 @@
+.blog-card{
+    background-color: rgba(141, 207, 78, 0.212);
+    transition: transform 0.4s linear;
+}
+.blog-card:hover{
+    background-color: rgba(140, 207, 78, 0.466);
+    box-shadow: 0 0 3px 3px lightskyblue;
+    transform: scale(1.009);
+}
+.blog-card img{
+    max-height: 180px;
+}

@@ -11,9 +11,9 @@ const Blogs = () => {
             .then(data=>setBlogs(data))
     },[])
     return (
-        <div className="container">
-            <h2>Our Blog and Experiences</h2>
-            <Row>
+        <div className="container my-4">
+            <h2 className="bg-light p-3 text-center mt-4">Our Blog and Experiences</h2>
+            <Row className="my-4 g-3">
                 {
                     blogs.map(blog=><Blog blog={blog} key={blog._id}></Blog>)
                 }

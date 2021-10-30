@@ -11,10 +11,10 @@ const Destinations = () => {
             .then(data=>setDestinations(data))
     },[])
     return (
-        <section className="container text-center">
-            <h2>Our Destinations</h2>
+        <section className="container text-center my-4">
+            <h2 className="bg-light p-3 text-center mt-4">Our Destinations</h2>
             <hr />
-            <Row>
+            <Row className="g-4">
                 {
                     destinations.map(destination=><Destination destination={destination} key={destination._id }></Destination>)
                 }

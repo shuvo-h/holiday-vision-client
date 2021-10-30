@@ -8,17 +8,17 @@ const Banner = () => {
             <Carousel.Item>
                 <img
                 className="carousel-img d-block w-100"
-                src="https://i.ibb.co/VvNNXS6/tour-travels-500x500.jpg"
+                src="https://i.ibb.co/Gn7j2Dm/banner-3.jpg"
                 alt="First slide"
                 />
                 <Carousel.Caption>
-                <h3 className="carosoul-text">Make A Charming Holiday</h3>
+                <h3 className="carosoul-text p-2">Make A Charming Holiday</h3>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <img
                 className="carousel-img d-block w-100"
-                src="https://i.ibb.co/WVHbShP/88539.jpg"
+                src="https://i.ibb.co/6J30sYx/banner-2.jpg"
                 alt="Second slide"
                 />
 
@@ -29,7 +29,7 @@ const Banner = () => {
             <Carousel.Item>
                 <img
                 className="carousel-img d-block w-100"
-                src="https://i.ibb.co/XW2r80T/90-904284-travel-desktop-wallpaper-tours-and-travels-background.jpg"
+                src="https://i.ibb.co/zGzTMhr/banner-1.jpg"
                 alt="Third slide"
                 />
 

@@ -1,0 +1,24 @@
+.login-form-container{
+    min-height: calc(100vh - 300.5px);
+}
+.login-form{
+    width: fit-content;
+}
+.login-form{
+    width: fit-content;
+    align-items: flex-end;
+}
+.submit-btn:hover{
+    background-color: turquoise;
+    color: rgba(0, 0, 255, 0.589) !important;
+}
+.google-btn:hover{
+    background-color: rgba(100, 148, 237, 0.349);
+}
+.welcome-card{
+    background-image: url('https://i.ibb.co/JyR355K/form-welcome.png');
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: bottom 50px right 10px;
+}
