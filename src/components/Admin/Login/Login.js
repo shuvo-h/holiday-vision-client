@@ -20,7 +20,7 @@ const Login = () => {
         setIsloading(true)
         loginWithGoogle()
             .then(()=>{
-                history.push(location.state?.from)
+                history.push(location.state?.from ? location.state?.from : "/home")
                 setError("")
             })
             .catch(error=>setError(error.message))

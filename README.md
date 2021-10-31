@@ -29,6 +29,7 @@ This website is developed as a tourism website. Various types of packages are of
 - REACT Bootstrap and custom CSS is used to design the pages.
 - In addition, REACT hook form and REACT Icon are also used to improve the design.
 - Data has been loaded and saved from/in mongoDB Atlas. 
+- Firebase authentication system is used as a login system 
 
 
 
