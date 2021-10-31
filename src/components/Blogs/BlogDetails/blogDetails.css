@@ -1,0 +1,9 @@
+.blog-details-container{
+    min-height: calc(100vh - 350px);
+}
+.writer-img{
+    max-height: 180px;
+}
+.blog-img{
+    max-height: 300px;
+}

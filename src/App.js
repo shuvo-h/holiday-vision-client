@@ -11,6 +11,7 @@ import UserBookings from './components/UserControl/UserBookings/UserBookings';
 import ManageBooking from './components/UserControl/ManageBooking/ManageBooking';
 import AddNewPackage from './components/UserControl/AddNewPackage/AddNewPackage';
 import Footer from './components/Shared/Footer/Footer';
+import BlogDetails from './components/Blogs/BlogDetails/BlogDetails';
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
             <PrivateRoute exact path="/add-new-package">
                 <AddNewPackage></AddNewPackage>
             </PrivateRoute>
+            <Route path="/blog-details/:id">
+              <BlogDetails></BlogDetails>
+            </Route>
             <Route path="/home">
               <Home></Home>
             </Route>

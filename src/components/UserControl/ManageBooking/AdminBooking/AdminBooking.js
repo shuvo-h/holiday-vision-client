@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import { IconContext } from "react-icons";
-import { ImCheckmark } from 'react-icons/im';
-import { MdWatchLater } from 'react-icons/md';
-import useAuth from '../../../../hooks/useAuth'
 import './adminBooking.css';
 
 const AdminBooking = (props) => {
     const [bookedPackage,setBookedPackage] = useState({});
-    const {user} = useAuth();
     const {pkg_title, pkg_img, cover_area, tour_date, tour_duration} = bookedPackage;
-    const {firstName, status, address, email, mobileNumber, _id, booking_pkg_id} = props.booking;
+    const {firstName, status, address, email, mobileNumber, _id, booking_pkg_id, user_photo} = props.booking;
+    
     useEffect(()=>{
         fetch(`http://localhost:5000/package/${booking_pkg_id}`)
         .then(res=>res.json())
@@ -20,7 +16,7 @@ const AdminBooking = (props) => {
         <Row className="admin-item mb-2 d-flex align-items-center justify-content-center">
             <Col md={5}>
                 <Row className="border-start border-top border-bottom">
-                    <Col><img className="manage-img img-fluid p-2" src={user.photoURL} alt="" /></Col>
+                    <Col><img className="manage-img img-fluid p-2" src={user_photo} alt="" /></Col>
                     <Col>
                         <h5><strong>{firstName}</strong></h5>
                         <p>{address ? address : "NA"}</p>

@@ -23,6 +23,7 @@ const BookingForm = () => {
     
     const onSubmit = bookingInfo => {
         bookingInfo.booking_pkg_id = _id;
+        bookingInfo.user_photo = user.photoURL;
         bookingInfo.status = "Pending";
         
         fetch('http://localhost:5000/booking',{

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown, Button } from 'react-bootstrap';
 import { Link, NavLink } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
 import useAuth from '../../../hooks/useAuth';
@@ -26,20 +26,22 @@ const NavBarTravel = () => {
                                 <Nav.Link  as={NavHashLink} to="/home#destination" smooth >Destinations</Nav.Link>
                                     {
                                         user.email && <>
-                                            <Nav.Link as={NavLink} to="/user-booking">My Bookings</Nav.Link>
-                                            <Nav.Link as={NavLink} to="/manage-all-booking">Manage Bookings</Nav.Link>
-                                            <Nav.Link as={NavLink} to="/add-new-package">Add New Package</Nav.Link>
-
+                                            <NavDropdown title="Dashboard" className="border rounded mx-2" id="collasible-nav-dropdown">
+                                                <NavDropdown.Item as={NavLink} to="/user-booking">My Bookings</NavDropdown.Item>
+                                                <NavDropdown.Item as={NavLink} to="/manage-all-booking">Manage Bookings</NavDropdown.Item>
+                                                <NavDropdown.Item as={NavLink} to="/add-new-package">Add New Package</NavDropdown.Item>
+                                            </NavDropdown>
                                             <NavDropdown title={user.displayName} className="border rounded mx-2" id="collasible-nav-dropdown">
-                                                <NavDropdown.Item as={NavLink} to="/">Profile</NavDropdown.Item>
+                                                <NavDropdown.Item as={NavLink} to="/profile">Profile</NavDropdown.Item>
                                                 <NavDropdown.Item as={NavLink} to="/user-booking">My Bookings</NavDropdown.Item>
                                                 <NavDropdown.Divider />
-                                                <NavDropdown.Item onClick={()=>logOut()} as={NavLink} to="/">Logout</NavDropdown.Item>
+                                                <NavDropdown.Item onClick={()=>logOut()} as={Button} to="/">Logout</NavDropdown.Item>
                                             </NavDropdown>
                                         </>
                                     }
+                                    <img className="profile-img img-fluid rounded-circle" src={user.photoURL} alt="" />
                                     {
-                                        user.email? <button onClick={()=>logOut()} className="border rounded fw-bold">Logout</button> : <Nav.Link  as={NavLink}  to="/login">Login</Nav.Link>
+                                        !user.email && <Nav.Link  as={NavLink}  to="/login">Login</Nav.Link>
                                     }
 
                         </Nav>
