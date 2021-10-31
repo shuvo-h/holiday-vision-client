@@ -12,7 +12,7 @@ import { IconContext } from "react-icons";
 const BookingForm = () => {
     const {user} = useAuth();
     const {id} = useParams();
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit,reset  } = useForm();
     const [bookingPackage,setBookingPackage] = useState({});
     const {cover_area, meals, pkg_img, pkg_title, pkg_txt, tour_date, tour_duration, _id} = bookingPackage;
     useEffect(()=>{
@@ -36,14 +36,15 @@ const BookingForm = () => {
         .then(res=>res.json())
         .then(data=>{
             if (data.insertedId) {
-                alert("booking request accepted. Please wait to accept.")
+                alert("booking request accepted. Please wait to accept.");
+                reset();
             }
         })
     };
     return (
         <div className="pkg-details-booking container my-4">
             <Row>
-                <Col>
+                <Col lg={6} md={12} sm={12}>
                     <Row>
                         <Col>
                             <div >
@@ -83,7 +84,7 @@ const BookingForm = () => {
                     </Row>
                     <p>{pkg_txt}</p>
                 </Col>
-                <Col>
+                <Col lg={6} md={12} sm={12} >
                     <div className="booking-form mx-auto p-3">
                         <h2 className="text-center">Fillup the Booking form</h2>
                         <form onSubmit={handleSubmit(onSubmit)} className="login-form d-flex flex-column" >

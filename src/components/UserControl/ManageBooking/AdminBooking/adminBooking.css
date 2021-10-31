@@ -1,6 +1,9 @@
 .manage-container{
     min-height: calc(100vh - 348.5px);
 }
+.admin-item{
+    background-color: rgba(202, 215, 236, 0.329);
+}
 .admin-item:hover{
     background-color: lightyellow !important; 
 }

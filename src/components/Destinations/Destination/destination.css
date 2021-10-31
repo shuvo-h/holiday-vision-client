@@ -1,13 +1,31 @@
-.destination-card{
-    transition: transform 0.3s ease-in-out;
+
+.destination-frame{
+    overflow: hidden;
+    cursor: pointer;
 }
-.destination-card:hover{
-    transform: scale(1.04);
+.destination-card:hover .destination-img img{
+    transform: scale(1.5);
+    transition: transform 1s ease-in-out;
 }
-.destination-text{
+.explore{
+    left: 33%;
+    bottom: 0;
+    color: chartreuse;
+    backdrop-filter: blur(2px);
+    position: absolute;
+    opacity: 0;
+}
+.destination-card:hover .explore{
+    transform: scale(1.5) translateY(-250%) ;
+    transition: transform  0.7s ease-in-out;
+    opacity: 1;
+    display: block;
+}
+
+ .location-name{
     font-size: large;
     font-weight: 700;
-    top: 50%;
+    bottom: 0%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+}  

@@ -1,9 +1,7 @@
 .login-form-container{
     min-height: calc(100vh - 300.5px);
 }
-.login-form{
-    width: fit-content;
-}
+
 .login-form{
     width: fit-content;
     align-items: flex-end;

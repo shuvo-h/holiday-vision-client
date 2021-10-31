@@ -7,10 +7,15 @@ const Destination = (props) => {
     
     return (
         <Col lg={3} md={4} sm={6} className="destination-card">
-            <div className="position-relative">
-                <img className="img-fluid" src={des_img} alt="" />
-                <div className="destination-text position-absolute text-warning ">
-                    {place}
+            <div className="destination-frame position-relative">
+                <div className="destination-img">
+                    <img className="img-fluid" src={des_img} alt="" />
+                </div>
+                <div className="explore">
+                    <h2>Explore</h2>
+                </div>
+                <div  className="location-name position-absolute text-white">
+                    <h5>{place}</h5>
                 </div>
             </div>
         </Col>

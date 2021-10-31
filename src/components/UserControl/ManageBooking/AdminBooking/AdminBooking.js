@@ -15,8 +15,12 @@ const AdminBooking = (props) => {
     return (
         <Row className="admin-item mb-2 d-flex align-items-center justify-content-center">
             <Col md={5}>
-                <Row className="border-start border-top border-bottom">
-                    <Col><img className="manage-img img-fluid p-2" src={user_photo} alt="" /></Col>
+                <Row className="border">
+                    <Col>
+                        <div className="d-flex justify-content-center">
+                            <img className="manage-img img-fluid p-2" src={user_photo} alt="" />
+                        </div>
+                    </Col>
                     <Col>
                         <h5><strong>{firstName}</strong></h5>
                         <p>{address ? address : "NA"}</p>
