@@ -6,7 +6,7 @@ const Destinations = () => {
     const [destinations,setDestinations] = useState([]);
     
     useEffect(()=>{
-        fetch('http://localhost:5000/alldestinations')
+        fetch('https://fathomless-oasis-64789.herokuapp.com/alldestinations')
             .then(res=>res.json())
             .then(data=>setDestinations(data))
     },[])

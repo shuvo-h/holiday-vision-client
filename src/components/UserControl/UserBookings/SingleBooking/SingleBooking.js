@@ -15,7 +15,7 @@ const SingleBooking = (props) => {
     const {pkg_img, pkg_title, tour_date, tour_duration}= bookedPackage;
     const {status, booking_pkg_id, _id} = props.booking;
     useEffect(()=>{
-        fetch(`http://localhost:5000/package/${booking_pkg_id}`)
+        fetch(`https://fathomless-oasis-64789.herokuapp.com/package/${booking_pkg_id}`)
         .then(res=>res.json())
         .then(data=>{
             setBookedPackage(data);

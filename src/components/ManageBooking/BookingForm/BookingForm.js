@@ -16,7 +16,7 @@ const BookingForm = () => {
     const [bookingPackage,setBookingPackage] = useState({});
     const {cover_area, meals, pkg_img, pkg_title, pkg_txt, tour_date, tour_duration, _id} = bookingPackage;
     useEffect(()=>{
-        fetch(`http://localhost:5000/package/${id}`)
+        fetch(`https://fathomless-oasis-64789.herokuapp.com/package/${id}`)
             .then(res=>res.json())
             .then(data=>setBookingPackage(data))
     },[id])
@@ -26,7 +26,7 @@ const BookingForm = () => {
         bookingInfo.user_photo = user.photoURL;
         bookingInfo.status = "Pending";
         
-        fetch('http://localhost:5000/booking',{
+        fetch('https://fathomless-oasis-64789.herokuapp.com/booking',{
             method:"POST",
             headers:{
                 'content-type': "application/json"

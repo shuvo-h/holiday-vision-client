@@ -9,7 +9,7 @@ const UserBookings = () => {
     const {user} = useAuth();
     const [bookingList,setBookingList] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/user/bookings',{
+        fetch('https://fathomless-oasis-64789.herokuapp.com/user/bookings',{
             method:"POST",
             headers:{
                 'content-type': "application/json"
@@ -22,7 +22,7 @@ const UserBookings = () => {
     const handleBookingCancle = (id) =>{
         const confirmation = window.confirm("Are you sure to cancel this booking?")
         if (confirmation) {
-            fetch(`http://localhost:5000/user/booking/remove`,{
+            fetch(`https://fathomless-oasis-64789.herokuapp.com/user/booking/remove`,{
                 method:"DELETE",
                 headers:{
                     'content-type': "application/json"

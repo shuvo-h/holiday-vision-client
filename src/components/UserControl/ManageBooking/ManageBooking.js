@@ -7,14 +7,14 @@ import AdminBooking from './AdminBooking/AdminBooking';
 const ManageBooking = () => {
     const [allBookings,setAllBookings] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/all-bookings')
+        fetch('https://fathomless-oasis-64789.herokuapp.com/all-bookings')
             .then(res=>res.json())
             .then(data=>setAllBookings(data))
     },[])
     
     // Booking status changing function 
     const handleBookingStatus = (id) =>{
-        fetch(`http://localhost:5000/booking/updateStatus/${id}`,{
+        fetch(`https://fathomless-oasis-64789.herokuapp.com/booking/updateStatus/${id}`,{
             method:"PUT",
             headers:{
                 "content-type":"application/json"
@@ -33,7 +33,7 @@ const ManageBooking = () => {
       const handleBookingCancle = (id) =>{
         const confirmation = window.confirm("Are you sure to cancel this booking?")
         if (confirmation) {
-            fetch(`http://localhost:5000/user/booking/remove`,{
+            fetch(`https://fathomless-oasis-64789.herokuapp.com/user/booking/remove`,{
                 method:"DELETE",
                 headers:{
                     'content-type': "application/json"

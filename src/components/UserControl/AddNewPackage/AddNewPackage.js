@@ -6,7 +6,7 @@ const AddNewPackage = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     
     const handleAddPackage = newPackage =>{
-        fetch('http://localhost:5000/package/add',{
+        fetch('https://fathomless-oasis-64789.herokuapp.com/package/add',{
             method:"POST",
             headers:{
                 "content-type":"application/json"

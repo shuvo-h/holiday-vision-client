@@ -8,7 +8,7 @@ const Packages = () => {
     const [packages,setPackages] = useState([]);
     
     useEffect(()=>{
-        fetch('http://localhost:5000/allpackages')
+        fetch('https://fathomless-oasis-64789.herokuapp.com/allpackages')
             .then(res=>res.json())
             .then(data=>setPackages(data))
     },[])

@@ -8,7 +8,7 @@ const BlogDetails = () => {
     const {id} = useParams();
     const {Wittern_date, b_img, b_txt, blog_title, writer_address, writer_img, writer_name} = blog;
     useEffect(()=>{
-        fetch(`http://localhost:5000/blogs/${id}`)
+        fetch(`https://fathomless-oasis-64789.herokuapp.com/blogs/${id}`)
             .then(res=>res.json())
             .then(data=>setBlog(data))
     },[id])
