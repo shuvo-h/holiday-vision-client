@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import './adminBooking.css';
+import { IconContext } from "react-icons";
+import { ImAddressBook } from 'react-icons/im';
+import { FiPhoneCall } from 'react-icons/fi';
+import { MdMarkEmailRead } from 'react-icons/md';
+
 
 const AdminBooking = (props) => {
     const [bookedPackage,setBookedPackage] = useState({});
@@ -23,9 +28,24 @@ const AdminBooking = (props) => {
                     </Col>
                     <Col>
                         <h5><strong>{firstName}</strong></h5>
-                        <p>{address ? address : "NA"}</p>
-                        <p>{mobileNumber ? mobileNumber : "NA"}</p>
-                        <p>{email}</p>
+                        <p> 
+                            <IconContext.Provider value={{ color: "blue", className: "me-2", size:"20" }}>
+                                <ImAddressBook />
+                            </IconContext.Provider>
+                             {address ? address : "NA"}
+                        </p>
+                        <p>
+                            <IconContext.Provider value={{ color: "blue", className: "me-2", size:"20" }}>
+                                <FiPhoneCall />
+                            </IconContext.Provider>
+                            {mobileNumber ? mobileNumber : "NA"}
+                        </p>
+                        <p>
+                            <IconContext.Provider value={{ color: "blue", className: "me-2", size:"20" }}>
+                                <MdMarkEmailRead />
+                            </IconContext.Provider>
+                            {email}
+                        </p>
                     </Col>
                     
                 </Row>
